@@ -21,7 +21,7 @@ jobs:
 
     env:
       Solution_Name: Lab6_Library_Test.sln
-      Test_Project_Path: Lab5_Library/Lab5_Library.csproj
+      Test_Project_Path: Lab6_Library_Test/Lab6_Library_Test.csproj
 
     steps:
     - name: Checkout repository
@@ -39,5 +39,4 @@ jobs:
       run: dotnet build ${{ env.Solution_Name }} --configuration Release --no-restore
 
     - name: Test and publish results
-      run: |
-        dotnet test ${{ env.Test_Project_Path }} --no-restore --verbosity normal
+      run: dotnet test ${{ env.Test_Project_Path }} --no-restore --verbosity normal
